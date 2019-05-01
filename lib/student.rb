@@ -27,6 +27,7 @@ class Student
       VALUES (?, ?)
     SQL 
     
+    
   end 
      
     
