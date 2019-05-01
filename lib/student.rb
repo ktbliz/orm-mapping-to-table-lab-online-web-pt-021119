@@ -17,7 +17,7 @@ class Student
   end 
   
   def self.drop_table 
-    sql = "DROP TABLE students;" 
+    sql = "DROP TABLE students" 
     DB[:conn].execute(sql)
   end 
   
@@ -27,7 +27,12 @@ class Student
       VALUES (?, ?)
     SQL 
     DB[:conn].execute(sql, self.name, self.grade)
-    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0] 
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
+    
+  def self.create 
+    
+    
+  end 
     
   end 
      
